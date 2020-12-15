@@ -44,10 +44,12 @@ function errorMsg(msg, error) {
 
 async function init(e) {
   try {
+    console.log('you are in init function');
     const stream = await navigator.mediaDevices.getUserMedia(constraints);
     handleSuccess(stream);
     e.target.disabled = true;
   } catch (e) {
+    console.log('can not find camera');
     handleError(e);
   }
 }
