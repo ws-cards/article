@@ -39,8 +39,11 @@
     <script>
         var video = document.querySelector('#gum-local')
         var myConstraints = {
+     
+      
+        audio: false,
         video: {
-        facingMode: 'user' // 優先呼叫前置攝像頭
+        facingMode: { exact: "environment" } 
         }
         }
         navigator.mediaDevices.getUserMedia(myConstraints).then((stream) => {
