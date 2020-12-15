@@ -14,6 +14,7 @@ const constraints = window.constraints = {
 };
 
 function handleSuccess(stream) {
+  alert('now in handleSuccess');
   const video = document.querySelector('video');
   const videoTracks = stream.getVideoTracks();
   console.log('Got stream with constraints:', constraints);
@@ -44,7 +45,7 @@ function errorMsg(msg, error) {
 
 async function init(e) {
   try {
-    console.log('you are in init function');
+    alert('you are in init function');
     const stream = await navigator.mediaDevices.getUserMedia(constraints);
     handleSuccess(stream);
     e.target.disabled = true;
