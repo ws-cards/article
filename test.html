@@ -36,7 +36,21 @@
 
     <div id="errorMsg"></div>
 </div>
-
+    <script>
+        var video = document.querySelector('#video')
+        var myConstraints = {
+        video: {
+        facingMode: 'user' // 優先呼叫前置攝像頭
+        }
+        }
+        navigator.mediaDevices.getUserMedia(myConstraints).then((stream) => {
+        // createObjectURL是個非常有用的API，諸位可以多研究研究
+        video.src = window.URL.createObjectURL(stream)
+        video.play()
+        }, (error) => {
+        console.error(error.name || error)
+        })   
+    </script>
 <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
 <script src="js/main.js"></script>
 
