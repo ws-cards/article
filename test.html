@@ -42,9 +42,7 @@
      
       
         audio: false,
-        video: {
-        facingMode: { exact: "environment" } 
-        }
+        video: true
         }
         navigator.mediaDevices.getUserMedia(myConstraints).then((stream) => {
         // createObjectURL是個非常有用的API，諸位可以多研究研究
