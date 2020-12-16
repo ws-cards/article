@@ -38,20 +38,18 @@
 </div>
 <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
     <script>
-        var video = document.querySelector('#gum-local')
-        var myConstraints = {
-     
-      
-        audio: false,
-        video: { facingMode: { exact: "environment" } }
-        }
-        navigator.mediaDevices.getUserMedia(myConstraints).then((stream) => {
-        // createObjectURL是個非常有用的API，諸位可以多研究研究
-        video.src = window.URL.createObjectURL(stream)
-        video.play()
-        }, (error) => {
-        console.error(error.name || error)
-        })
+     //   var video = document.querySelector('#gum-local')
+     //   var myConstraints = {
+     //   audio: false,
+     //   video: { facingMode: { exact: "environment" } }
+     //   }
+     //   navigator.mediaDevices.getUserMedia(myConstraints).then((stream) => {
+     //   // createObjectURL是個非常有用的API，諸位可以多研究研究
+     //   video.src = window.URL.createObjectURL(stream)
+     //   video.play()
+     //   }, (error) => {
+     //   console.error(error.name || error)
+     //   })
     </script>
 
 <script src="js/main.js"></script>
