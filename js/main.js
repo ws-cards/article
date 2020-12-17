@@ -18,8 +18,10 @@ const videoK = document.querySelector('#gum-local');
 
 capture.addEventListener('click', e => {
   e.preventDefault()
-  photo.width = videoK.videoWidth
-  photo.height = videoK.videoHeight
+  console.log("videoK.videoWidth:"+videoK.videoWidth);
+  console.log("videoK.videoHeight:"+videoK.videoHeight);
+  photo.width = videoK.videoWidth;
+  photo.height = videoK.videoHeight;
   photo.getContext('2d')
     .drawImage(videoK, 0, 0, photo.width, photo.height)
 })
