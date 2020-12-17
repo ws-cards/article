@@ -12,14 +12,16 @@ const constraints = window.constraints = {
   audio: false,
   video: { facingMode: { exact: "environment" } }
 };
-const capture = document.querySelector('#capture')
+const capture = document.querySelector('#capture');
+const photo = document.querySelector('#photo');
+const videoK = document.querySelector('#gum-local');
 
 capture.addEventListener('click', e => {
   e.preventDefault()
-  photo.width = video.videoWidth
-  photo.height = video.videoHeight
+  photo.width = videoK.videoWidth
+  photo.height = videoK.videoHeight
   photo.getContext('2d')
-    .drawImage(video, 0, 0, photo.width, photo.height)
+    .drawImage(videoK, 0, 0, photo.width, photo.height)
 })
 
 
