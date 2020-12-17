@@ -14,8 +14,6 @@ const constraints = window.constraints = {
 };
 const capture = document.querySelector('#capture')
 
-getLocalVideo();
-
 capture.addEventListener('click', e => {
   e.preventDefault()
   photo.width = video.videoWidth
@@ -23,20 +21,6 @@ capture.addEventListener('click', e => {
   photo.getContext('2d')
     .drawImage(video, 0, 0, photo.width, photo.height)
 })
-
-async function getLocalVideo() {
-  try {
-    const stream = 
-      await navigator.mediaDevices.getUserMedia(options)
-    video.srcObject = stream
-  } catch (e) {
-    console.log(`${e.message} ${e.name}`)
-  }
-}
-
-
-
-
 
 
 function handleSuccess(stream) {
