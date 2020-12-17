@@ -18,8 +18,8 @@ const videoK = document.querySelector('#gum-local');
 
 capture.addEventListener('click', e => {
   e.preventDefault()
-  console.log("videoK.videoWidth:"+videoK.videoWidth);
-  console.log("videoK.videoHeight:"+videoK.videoHeight);
+  alert("videoK.videoWidth:"+videoK.videoWidth);
+  alert("videoK.videoHeight:"+videoK.videoHeight);
   photo.width = videoK.videoWidth;
   photo.height = videoK.videoHeight;
   photo.getContext('2d')
