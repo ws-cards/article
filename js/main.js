@@ -45,14 +45,6 @@ function handleSuccess(stream) {
 
   window.stream = stream; // make variable available to browser console
   video.srcObject = stream;
-  
-  
-const canvas = window.canvas = document.querySelector('canvas');
-canvas.width = 480;
-canvas.height = 360;
-    canvas.width = video.videoWidth;
-  canvas.height = video.videoHeight;
-  canvas.getContext('2d').drawImage(video, 0, 0, canvas.width, canvas.height);
 }
 
 function handleError(error) {
