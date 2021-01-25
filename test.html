@@ -25,12 +25,21 @@
     <link rel="stylesheet" href="css/main.css">
 
 </head>
-
+    <style>
+        #bor{
+           position: absolute;
+           z-index: 1;
+           width: 350px;
+           height: 500px;
+           border: 5px solid black;
+           border-color:royalblue;  
+        }
+    </style>
 <body>
 
 <div id="container">
         <span>getUserMedia</span></h1>
-
+    <div id="bor" width="320" height="240"></div>
     <video id="gum-local" autoplay playsinline></video>
     <button id="showVideo">Open camera</button>
     <button id="capture">Screen Shot</button>
